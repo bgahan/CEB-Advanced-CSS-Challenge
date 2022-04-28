@@ -1,7 +1,7 @@
 :root {
     --primary-color: whitesmoke;
-    --secondary-color: #3f5277;
-    --tertiary-color: #271637;
+    --secondary-color: #2a6ff8f4;
+    --tertiary-color: #421b66dd;
 }
 
 * {
@@ -12,6 +12,7 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(212, 208, 208);
 }
 
 header {
@@ -21,18 +22,11 @@ header {
     font-size: 18px;
     color: whitesmoke;
     margin: 0;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: -webkit-sticky; 
-    position: sticky;
     top: 0;
-    background-image: url("../images/hero-bg.jpeg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 80%;
-    z-index: 9999;
 }
 
 header a {
@@ -65,7 +59,14 @@ header nav ul li a:hover {
     border-radius: 15px;
     text-shadow: none;
 }
-
+.hero {
+    padding-top: 200px;
+    background-image: url("../assets/images/hero-image.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
 section {
     padding: 60px;
 }
@@ -102,38 +103,30 @@ section {
     grid-template-columns: repeat(2, 300px);
 }
 
+.project-name a:hover{
+    /*  */
+}
 img {
     height: 200px;
     width: 90%
 }
 
-.contact-info {
-    background-color: var(--secondary-color);
+#contact-me {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .contact-info h2 {
-    color: var(--primary-color);
+    width: 20%;
+    text-align: center;
+    border-right: 3px solid black;
 }
+
 
 .contact-info > * {
     flex: 1;
     margin: 15px;
-}
-
-.contact-info div {
-    color: white;
-}
-
-.contact-info h3 {
-    color: var(--primary-color);
-    font-size: 32px;
-}
-
-.contact-info a {
-    color: var(--primary-color);
 }
 
 /* Media Query for smaller desktop screens and smaller */
@@ -158,26 +151,6 @@ img {
     header nav ul li a {
         font-size: 20px;
     }
-
-    .hero-cta, .hero-form {
-        width: 100%;
-    }
-
-    .hero-cta {
-        text-align: center;
-    }
-
-    /* .section-title {
-        width: 80%;
-    } */
-
-    .trainer {
-        flex: 0 70%;
-    }
-
-    .contact-info iframe {
-        flex: 1 100%;
-    }
 }
 
 /* Media Query for tablets and smaller */
@@ -197,19 +170,11 @@ img {
        width: 100%;
    }
 
-   .trainer {
-       flex: 0 100%;
-   }
-
    .contact-info {
        text-align: center;
    }
 
    .contact-info > * {
        flex: 0 100%;
-   }
-
-   .contact-form {
-       order: 3;
    }
 }
