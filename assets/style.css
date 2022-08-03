@@ -38,6 +38,11 @@ header nav {
     margin: 7px 0;
 }
 
+header img {
+    width: 10px;
+    height: 10px;
+}
+
 header nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +108,7 @@ section {
     grid-template-columns: repeat(2, 300px);
 }
 
-img {
+.projects img {
     height: 200px;
     width: 90%
 }
